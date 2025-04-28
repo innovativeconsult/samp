@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script defer src="GoogleSheet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <script>
+
+
+
+        //Jquery Event Function
+        $(document).ready(function () {
+            // Set proper initial states
+            $(".box5, .box6,.box3,.box4").css({
+                "animation": "none",
+                "visibility": "visible"
+            });
+
+            $("#tata").click(function () {
+                // 1. Reset animations immediately
+                $(".box5, .box6,.box3,.box4").css("animation", "none");
+
+                // 2. Force browser reflow (critical for first click)
+                void $(".box5")[0].offsetWidth;
+                void $(".box6")[0].offsetWidth;
+                void $(".box3")[0].offsetWidth;
+                void $(".box4")[0].offsetWidth;
+
+                // 3. Apply new animations
+                $(".box5").css({
+                    "animation": "sana 1s forwards",
+                    "visibility": "visible"
+                });
+
+                $(".box6").css({
+                    "animation": "taan 1s forwards 0.2s",
+                    "visibility": "visible"
+                });
+
+                $(".box3").css({
+                    "animation": "sana 1s forwards",
+                    "visibility": "visible"
+                });
+
+
+                $(".box4").css({
+                    "animation": "taan 1s forwards 0.2s",
+                    "visibility": "visible"
+                });
+            });
+        });
+
+
+        //About
+
+        $(document).ready(function () {
+            // Hide the content initially and position it to the left
+            $(".ptag p").css({
+                "position": "relative",
+                "left": "-100%",
+                "opacity": "0"
+            });
+
+            // Animate the content to slide in from the left
+            $(".ptag p").animate({
+                left: "0",
+                opacity: "1"
+            }, 1000); // 1000 milliseconds (1 second) animation duration
+
+            // Optional: Add a slight delay to each line for a staggered effect
+            $(".ptag p br").each(function (index) {
+                $(this).prev().delay(100 * index).animate({
+                    left: "0",
+                    opacity: "1"
+                }, 800);
+            });
+        });
+
+        //Click about us
+
+        $(document).ready(function () {
+            $("#abo").click(function () {
+                $(".ptag p").css({
+                    "position": "relative",
+                    "left": "-100%",
+                    "opacity": "0"
+                });
+
+                // Animate the content to slide in from the left
+                $(".ptag p").animate({
+                    left: "0",
+                    opacity: "1"
+                }, 1000); // 1000 milliseconds (1 second) animation duration
+
+                // Optional: Add a slight delay to each line for a staggered effect
+                $(".ptag p br").each(function (index) {
+                    $(this).prev().delay(100 * index).animate({
+                        left: "0",
+                        opacity: "1"
+                    }, 800);
+                });
+            })
+
+
+        })
+        //click above
+
+
+
+
+
+    </script>
+
+    <style>
+        .box1,
+        .box2 {
+            visibility: visible;
+        }
+
+        .animate-1 {
+            animation: sana 1s forwards;
+        }
+
+        .animate-2 {
+            animation: taan 1s forwards 0.2s;
+        }
+    </style>
+    </script>
+
+
+    <div id="nav">
+        <div>
+            <img src="./images/logo.png" alt="">
+
+        </div>
+        <div class="pressing">
+            <a href="#home">Home</a>
+
+            <a href="#service" id="tata">Services</a>
+            <a href="#about" id="abo">About Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+
+    <div id="home">
+        <div class="Title">
+            <img src="./images/home.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="service">
+
+        <div>
+            <h1>Services</h1>
+        </div>
+        <div class="providee">
+
+            <div class="gam">
+                <div class="box box5">
+                    <h1>Web Development</h1>
+                </div>
+                <div class="box box6">
+                    <h1>Web Application</h1>
+                </div>
+                <div class="rightmarquee">
+                    <marquee direction="down" scrolldelay="1">
+                        <div>
+                            <img src="./images/it .jpg" alt="">
+                            <p>
+                                ICS develops dynamic and scalable web applications to streamline your business
+                                operations. From simple tools to complex platforms, we build custom solutions that work
+                                for you.
+
+                            </p>
+                        </div>
+                    </marquee>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <div class="sam">
+                <div class="box box3">
+                    <h1>IT Service & Support</h1>
+                </div>
+                <div class="box box4">
+                    <h1>Digital Marketing</h1>
+                </div>
+                <div class="rightmarquee">
+                    <marquee direction="up" scrolldelay="1">
+                        <div>
+                            <img src="./images/digi.jpg" alt="">
+                            <p>We help you grow your online reach through SEO, social media marketing, and paid
+                                campaigns.
+                                ICS drives engagement and conversions with data-driven strategies.
+                            </p>
+                        </div>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="about">
+        <h1>About Us</h1>
+        <div class="ptag">
+
+            <p>"At Innovative Consultancy Services,We Believe that every great digital journey starts with a bold
+                idea.Our mission is to turn those ideas into Intelligent,
+                Scalable, and Impactful IT solutions that power business success.
+                With a blend of Innovation, Strategy and technical expertise,
+                We deliver Software, Applications and IT services that make a difference."</p>
+
+        </div>
+
+        <div class="boxtop">
+            <main>
+                <div class="profile profile1">
+                    <img src="./images/tamil1.jpg" alt="">
+                    <h2>Tamilarasan N</h2>
+                    <h3> B.Tech, (IT)</h3>
+                    <h3>Founder & CEO</h3>
+
+
+                </div>
+                <div class="profile profile2">
+                    <img src="./images/krishnan.jpg" alt="">
+                    <h2>Jayakrishnan Radhakrishnan</h2>
+                    <h3> Co-Founder</h3>
+                </div>
+            </main>
+            <div class="profile profile3">
+                <img src="./images/sanjay.jpg" alt="">
+                <h2>Sanjay Kumar S</h2>
+                <h3> B.Tech, (IT)</h3>
+                <h3>Technical Head</h3>
+            </div>
+        </div>
+
+
+        <div class="boxbottom">
+            <div class="profile profile1">
+                <img src="./images/satheesh.jpg" alt="">
+                <h2>Satheesh MG</h2>
+                <h3> B.Tech, (IT)</h3>
+                <h3>Business Head</h3>
+            </div>
+            <div class="profile profile2">
+                <img src="./images/selva.jpg" alt="">
+                <h2>Selvaganesan A</h2>
+                <h3> B.Tech, (IT)</h3>
+                <h3>Business Development Manager</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="contact">
+        <div class="contacting">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="in">
+            <form id="form" method="post" action="" name="contact-form">
+                <div class="topic">
+                    <label> Say something...!</label>
+                </div>
+
+                <label for="">Name</label><br />
+                <input type="text" name="User_Name" id="name" placeholder="Enter Your Name" required><br />
+                <label for="">Email</label><br />
+                <input type="email" name="User_Email" placeholder="Enter Your Email " id="email" required><br />
+                <label for="">Mobile No</label><br />
+                <input type="text" name="User_Number" placeholder="Mobile No" id="number" required><br />
+                <label for="">How Can I Help You?</label><br />
+                <textarea name="User_Message" placeholder=" write your requirments...." required></textarea>
+
+                <div class="submitt">
+                    <button type="submit"> Submit</button>
+                </div>
+            </form>
+            <div id="rendering" style="display: none;">Please Wait....</div>
+
+        </div>
+    </div>
+    <div class="foot">
+
+        <!-- <div class="maigrate"> -->
+        <div class="quicklink">
+            <b>Quick links</b>
+            <a href="#home">Home</a>
+
+            <a href="#service" id="tata">Services</a>
+            <a href="#about" id="abo">About Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="sitelink">
+            <b>Site links</b>
+            <li>
+                <i class="fa-solid fa-envelope"></i> <a href="mailto:techinnovativeconsult@gmail.com">
+                    techinnovativeconsult@gmail.com </a>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-phone"> </i><a href=""> 8489417713</a>
+            </li>
+
+            <li>
+                <i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/tech_ics/?utm_source=qr&r=nametag"> Instagram</a>
+            </li>
+
+            <li>
+                <i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/innovative-consultancy-services-322a32361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> LinkedIn</a>
+            </li>
+
+            <li>
+                <i class="fa-brands fa-x-twitter"></i> <a href="https://x.com/Tech_ICS_?t=9l3RTnSoSi6Bl33TjQL22Q&s=08"> Twitter</a>
+            </li>
+
+            <li>
+                <i class="fa-brands fa-square-facebook"></i><a href="https://www.facebook.com/share/1Ejiksmmeh/"> Facebook</a>
+            </li>
+        </div>
+        
+        <!-- </div> -->
+    </div>
+    <footer>
+       <li><i class="fa-solid fa-copyright"></i><a>Copyright</a><b>Innovative Consultancy Services.</b><a>All Rights Reserved</a> </li>
+    </footer>
+
+
+</body>
+
+</html>
