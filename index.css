@@ -46,8 +46,8 @@ body{
 #nav img{
     padding-top: 10px;
     height: 180px;
-    width: 280px;
-    margin-bottom:10px;
+    width: 200px;
+    margin-bottom:100px;
 }
 .pressing{
     display: flex;
